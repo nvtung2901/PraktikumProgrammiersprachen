@@ -1,0 +1,16 @@
+07:42:27 **** Rebuild of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+..\Variablen.cpp: In function 'int main()':
+..\Variablen.cpp:15:9: warning: unused variable 'iErste' [-Wunused-variable]
+   15 |     int iErste = 0;
+      |         ^~~~~~
+..\Variablen.cpp:16:9: warning: unused variable 'iZweite' [-Wunused-variable]
+   16 |     int iZweite = 0;
+      |         ^~~~~~~
+g++ -o Versuch01Teil1.exe Variablen.o 
+Info: Nothing to build for Versuch01Teil1
+07:54:15 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
