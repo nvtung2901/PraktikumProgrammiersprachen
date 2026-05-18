@@ -1,8 +1,87 @@
-11:15:39 **** Rebuild of configuration Debug for project Versuch01Teil2 ****
+12:32:58 **** Rebuild of configuration Debug for project Versuch02Teil2 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Strukturen.o "..\\Strukturen.cpp" 
-g++ -o Versuch01Teil2.exe Strukturen.o 
-11:15:47 **** Incremental Build of configuration Debug for project Versuch01Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+Info: Nothing to build for Versuch02Teil2
+Info: Nothing to build for Versuch02Teil2
+Info: Nothing to build for Versuch02Teil2
+12:40:33 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Strukturen.o "..\\Strukturen.cpp" 
-g++ -o Versuch01Teil2.exe Strukturen.o 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:41:32 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:42:50 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:43:42 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:48:03 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+Info: Nothing to build for Fibonacci
+12:48:52 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:50:21 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:50:57 **** Incremental Build of configuration Debug for project Fibonacci ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o rekursivFibonacci.o "..\\rekursivFibonacci.cpp" 
+g++ -o Fibonacci.exe rekursivFibonacci.o 
+12:54:35 **** Incremental Build of configuration Debug for project Fibonacci ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o rekursivFibonacci.o "..\\rekursivFibonacci.cpp" 
+g++ -o Fibonacci.exe rekursivFibonacci.o 
+12:54:43 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+..\fibonacci.cpp:42:5: error: unterminated comment
+   42 |     /*2.2.2.3 Das iterative Fibonacci Programm ist deutlich schneller
+      |     ^
+..\fibonacci.cpp: In function 'int main()':
+..\fibonacci.cpp:40:14: error: expected '}' at end of input
+   40 |     return 0;
+      |              ^
+..\fibonacci.cpp:34:1: note: to match this '{'
+   34 | {
+      | ^
+12:54:53 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:57:55 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:58:08 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+12:58:14 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
+13:10:48 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+..\fibonacci.cpp: In function 'int main()':
+..\fibonacci.cpp:47:7: error: expected primary-expression before '/' token
+   47 |      */
+      |       ^
+..\fibonacci.cpp:48:1: error: expected primary-expression before '}' token
+   48 | }
+      | ^
+13:10:59 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
+g++ -o Versuch02Teil2.exe fibonacci.o 
