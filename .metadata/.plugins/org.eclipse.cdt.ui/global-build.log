@@ -14,3 +14,109 @@ Info: Nothing to build for Versuch01Teil1
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
 g++ -o Versuch01Teil1.exe Variablen.o 
+08:13:05 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+08:24:22 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+08:25:36 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+08:29:27 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+..\Variablen.cpp: In function 'int main()':
+..\Variablen.cpp:46:5: error: 'string' was not declared in this scope
+   46 |     string sVorname, sNachname;
+      |     ^~~~~~
+..\Variablen.cpp:46:5: note: suggested alternatives:
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iosfwd:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ostream:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/iostream:43,
+                 from ..\Variablen.cpp:10:
+C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h:79:33: note:   'std::string'
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:46:
+C:/msys64/mingw64/include/c++/15.2.0/string:80:11: note:   'std::pmr::string'
+   80 |     using string    = basic_string<char>;
+      |           ^~~~~~
+08:30:49 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+..\Variablen.cpp: In function 'int main()':
+..\Variablen.cpp:46:5: error: 'string' was not declared in this scope
+   46 |     string sVorname = "";
+      |     ^~~~~~
+..\Variablen.cpp:46:5: note: suggested alternatives:
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iosfwd:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ostream:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/iostream:43,
+                 from ..\Variablen.cpp:10:
+C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h:79:33: note:   'std::string'
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:46:
+C:/msys64/mingw64/include/c++/15.2.0/string:80:11: note:   'std::pmr::string'
+   80 |     using string    = basic_string<char>;
+      |           ^~~~~~
+08:30:55 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+..\Variablen.cpp: In function 'int main()':
+..\Variablen.cpp:46:5: error: 'string' was not declared in this scope
+   46 |     string sVorname = "";
+      |     ^~~~~~
+..\Variablen.cpp:46:5: note: suggested alternatives:
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iosfwd:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ostream:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/iostream:43,
+                 from ..\Variablen.cpp:10:
+C:/msys64/mingw64/include/c++/15.2.0/bits/stringfwd.h:79:33: note:   'std::string'
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:46:
+C:/msys64/mingw64/include/c++/15.2.0/string:80:11: note:   'std::pmr::string'
+   80 |     using string    = basic_string<char>;
+      |           ^~~~~~
+08:31:23 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+08:38:57 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+Info: Nothing to build for Versuch01Teil1
+08:56:46 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+09:06:40 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+09:07:43 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 
+09:23:34 **** Incremental Build of configuration Debug for project Versuch01Teil1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Variablen.o "..\\Variablen.cpp" 
+g++ -o Versuch01Teil1.exe Variablen.o 

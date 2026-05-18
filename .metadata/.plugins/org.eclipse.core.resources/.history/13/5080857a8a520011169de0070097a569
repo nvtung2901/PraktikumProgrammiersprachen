@@ -57,7 +57,7 @@ int main()
     std::cout << "\nIhr Vor-Nachname ist: " << sVornameName << std::endl;
     std::cout << "Ihr Nach-Vorname ist: " << sNameVorname << std::endl;
 
-    //Felder
+    //Feld
     {
     	int iFeld[2] = {1, 2};
     	std::cout << "\nFeld:\n" << iFeld[0] << " " << iFeld[1] << std::endl;
@@ -77,10 +77,6 @@ int main()
     int iName2 = (int)sNachname[1];
     std::cout << "\nErste zwei Buchstaben Ihres Vornames in ASCII: " << iVorname1 << ", " << iVorname2 << std::endl;
     std::cout << "Erste zwei Buchstaben Ihres Nachnames in ASCII: " << iName1 << ", " << iName2 << std::endl;
-
-    //Position im Alphabet
-    std::cout << "\nPosition im Alphabet von " << sVorname[0] << ", " << sVorname[1] << ": " << iVorname1 % 32 << ", " << iVorname2 % 32;
-    std::cout << "\nPosition im Alphabet von " << sNachname[0] << ", " << sNachname[1] << ": " << iName1 % 32 << ", " << iName2 % 32;
     return 0;
     
 }

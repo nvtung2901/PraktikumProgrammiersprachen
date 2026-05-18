@@ -20,7 +20,6 @@ int main()
     std::cout << "Erste ganze Zahl: ";
     std::cin >> iErste;
     std::cout << "Zweite ganze Zahl: ";
-
     std::cin >> iZweite;
     // Rechnen und Output
     int iSumme = iErste + iZweite;
@@ -29,7 +28,6 @@ int main()
         	  << " ergibt die ganze Zahl: " << iSumme << std::endl;
     std::cout << "Die Division " << iErste << "/" << iZweite
     		  << " ergibt die ganze Zahl: " << iQuotient << std::endl;
-
     // Double statt Int
     double dSumme = iErste + iZweite;
     double dQuotient = iErste/iZweite;
@@ -37,7 +35,6 @@ int main()
               << " ergibt die Gleitkommazahl: " << dSumme << std::endl;
     std::cout << "Die Division " << iErste << "/" << iZweite
         	  << " ergibt die Gleitkommazahl: " << dQuotient << std::endl;
-
     // Mit Typecasting
     double dSummeCast = (double)iErste + iZweite;
     double dQuotientCast = (double)iErste/iZweite;
@@ -45,42 +42,9 @@ int main()
               << " ergibt die Gleitkommazahl: " << dSummeCast << std::endl;
     std::cout << "Die Division (mit Casting) " << iErste << "/" << iZweite
               << " ergibt die Gleitkommazahl: " << dQuotientCast << std::endl;
-
     //Benutzername
-    std::string sVorname, sNachname, sVornameName, sNameVorname;
-    std::cout << "\nIhre Vorname: ";
-    std::cin >> sVorname;
-    std::cout << "Ihre Nachname: ";
-    std::cin >> sNachname;
-    sVornameName = sVorname + " " + sNachname;
-    sNameVorname = sNachname + ", " + sVorname;
-    std::cout << "\nIhr Vor-Nachname ist: " << sVornameName << std::endl;
-    std::cout << "Ihr Nach-Vorname ist: " << sNameVorname << std::endl;
+    string sVorname, sNachname;
 
-    //Felder
-    {
-    	int iFeld[2] = {1, 2};
-    	std::cout << "\nFeld:\n" << iFeld[0] << " " << iFeld[1] << std::endl;
-    	int spielfeld[2][3] = {{1, 2, 3},
-							   {4, 5, 6}};
-    	std::cout << "spielfeld:\n" << spielfeld[0][0] << " " << spielfeld[0][1] << " " << spielfeld[0][2]
-				  << std::endl      << spielfeld[1][0] << " " << spielfeld[1][1] << " " << spielfeld[1][2] << std::endl;
-    	const int iZweite = 1;
-    	std::cout << "\niZweite: " << iZweite << std::endl;
-    }
-    std::cout << "iZweite: " << iZweite << std::endl;
-
-    //Char umwandeln
-    int iVorname1 = (int)sVorname[0];
-    int iVorname2 = (int)sVorname[1];
-    int iName1 = (int)sNachname[0];
-    int iName2 = (int)sNachname[1];
-    std::cout << "\nErste zwei Buchstaben Ihres Vornames in ASCII: " << iVorname1 << ", " << iVorname2 << std::endl;
-    std::cout << "Erste zwei Buchstaben Ihres Nachnames in ASCII: " << iName1 << ", " << iName2 << std::endl;
-
-    //Position im Alphabet
-    std::cout << "\nPosition im Alphabet von " << sVorname[0] << ", " << sVorname[1] << ": " << iVorname1 % 32 << ", " << iVorname2 % 32;
-    std::cout << "\nPosition im Alphabet von " << sNachname[0] << ", " << sNachname[1] << ": " << iName1 % 32 << ", " << iName2 % 32;
     return 0;
     
 }
