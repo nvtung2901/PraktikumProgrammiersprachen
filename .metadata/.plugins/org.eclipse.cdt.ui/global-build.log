@@ -1,87 +1,110 @@
-12:32:58 **** Rebuild of configuration Debug for project Versuch02Teil2 ****
+14:01:09 **** Rebuild of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-Info: Nothing to build for Versuch02Teil2
-Info: Nothing to build for Versuch02Teil2
-Info: Nothing to build for Versuch02Teil2
-12:40:33 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:01:14 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:41:32 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
+   24 |                                 wort[i] == schluessel[1][j];
+..\Verschluesselung.cpp: In function 'int main()':
+..\Verschluesselung.cpp:43:35: error: initializer-string for 'char [26]' is too long [-fpermissive]
+   43 |         char schluessel[2][26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:44:59: error: initializer-string for 'char [26]' is too long [-fpermissive]
+   44 |                                                           "HIJKLMNOPQRSTUVWXYZABCDEFG"};
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+14:01:46 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:42:50 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp:43:35: warning: multi-character literal with 26 characters exceeds 'int' size of 4 bytes
+   43 |         char schluessel[2][26] = {'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:44:59: warning: multi-character literal with 26 characters exceeds 'int' size of 4 bytes
+   44 |                                                           'HIJKLMNOPQRSTUVWXYZABCDEFG'};
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
+   24 |                                 wort[i] == schluessel[1][j];
+..\Verschluesselung.cpp: In function 'int main()':
+..\Verschluesselung.cpp:43:35: error: narrowing conversion of '1465407834' from 'int' to 'char' [-Wnarrowing]
+   43 |         char schluessel[2][26] = {'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:44:59: error: narrowing conversion of '1145390663' from 'int' to 'char' [-Wnarrowing]
+   44 |                                                           'HIJKLMNOPQRSTUVWXYZABCDEFG'};
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+14:07:10 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:43:42 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
+   24 |                                 wort[i] == schluessel[1][j];
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:08:03 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:48:03 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+Info: Nothing to build for Versuch02Teil3
+14:09:39 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-Info: Nothing to build for Fibonacci
-12:48:52 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:10:25 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:50:21 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+Info: Nothing to build for Versuch02Teil3
+14:11:28 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:50:57 **** Incremental Build of configuration Debug for project Fibonacci ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:11:55 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o rekursivFibonacci.o "..\\rekursivFibonacci.cpp" 
-g++ -o Fibonacci.exe rekursivFibonacci.o 
-12:54:35 **** Incremental Build of configuration Debug for project Fibonacci ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
+..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   18 |         for(int i = 0; i < wort.length(); i++)
+      |                        ~~^~~~~~~~~~~~~~~
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:12:18 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o rekursivFibonacci.o "..\\rekursivFibonacci.cpp" 
-g++ -o Fibonacci.exe rekursivFibonacci.o 
-12:54:43 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:13:09 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-..\fibonacci.cpp:42:5: error: unterminated comment
-   42 |     /*2.2.2.3 Das iterative Fibonacci Programm ist deutlich schneller
-      |     ^
-..\fibonacci.cpp: In function 'int main()':
-..\fibonacci.cpp:40:14: error: expected '}' at end of input
-   40 |     return 0;
-      |              ^
-..\fibonacci.cpp:34:1: note: to match this '{'
-   34 | {
-      | ^
-12:54:53 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:14:19 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:57:55 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:20:39 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:58:08 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
+14:26:36 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-12:58:14 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
-13:10:48 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-..\fibonacci.cpp: In function 'int main()':
-..\fibonacci.cpp:47:7: error: expected primary-expression before '/' token
-   47 |      */
-      |       ^
-..\fibonacci.cpp:48:1: error: expected primary-expression before '}' token
-   48 | }
-      | ^
-13:10:59 **** Incremental Build of configuration Debug for project Versuch02Teil2 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o fibonacci.o "..\\fibonacci.cpp" 
-g++ -o Versuch02Teil2.exe fibonacci.o 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
+g++ -o Versuch02Teil3.exe Verschluesselung.o 
