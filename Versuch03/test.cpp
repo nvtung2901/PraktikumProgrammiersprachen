@@ -129,8 +129,30 @@ bool zugAusfuehrenTest(int eingabeFeld[GROESSE_Y][GROESSE_X], const int ergebnis
     // wenn AUSFUEHRLICH gleich 1 werden zusaetzlich beide Spielfelder ausgegeben   
     //
     // Hier erfolgt jetzt Ihre Implementierung ...
-
-    return 0;
+	std::cout << "Fuehre Test " << testNummer + 1 << " fuer 'zugAusfuehren()' aus ..." << std::endl;
+	std::cout << "----------------------------------" << std::endl << std::endl;
+	bool check = true;
+	zugAusfuehren(eingabeFeld, spieler, posX, posY);
+	for(int j = 0; j < GROESSE_Y; j++)
+	{
+		for(int i = 0; i < GROESSE_X; i++){
+			if(eingabeFeld[j][i] != ergebnisFeld[j][i]) check = false;
+		}
+	}
+	if(check == true) std::cout << "Test " << testNummer + 1 << " bestanden!" << std::endl << std::endl;
+	else
+	{
+		std::cout << "Test " << testNummer + 1 << " fehlschalgen!" << std::endl << std::endl;
+		if(AUSFUEHRLICH == 1)
+		{
+			std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+			zeigeSpielfeld(eingabeFeld);
+			std::cout << std::endl << "Richtiges Ergebnis: " << std::endl;
+			zeigeSpielfeld(ergebnisFeld);
+			std::cout << std::endl << std::endl;
+		}
+	}
+    return check;
 }
 
 bool moeglicheZuegeTest(const int eingabeFeld[GROESSE_Y][GROESSE_X], const int spieler,
@@ -540,7 +562,15 @@ bool ganzenTestAusfuehren()
         for (int i = 0; i < 10; i++)
         {
             // Hier erfolgt jetzt Ihre Implementierung (entsprechende Testfunktion aufrufen) ...
+        	bool tmp_ergebnis = zugAusfuehrenTest(eingabeFeld[i], ergebnisFeld[i], spieler[i], position[i][0], position[i][1], i);
+        	if (gesamtErgebnis == true && tmp_ergebnis == false)
+        	{
+        		gesamtErgebnis = false;
+        	}
+
         }
+
+        std::cout << "Ende des Tests fuer 'zugAusfuehren()'" << std::endl << std::endl;
     }
 
 
@@ -574,6 +604,7 @@ bool ganzenTestAusfuehren()
         for (int i = 0; i < 2; i++)
         {
             // Hier erfolgt jetzt Ihre Implementierung (entsprechende Testfunktion aufrufen) ...
+
         }
     }
 

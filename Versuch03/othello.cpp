@@ -188,7 +188,7 @@ bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSp
         	if(spielfeld[posY+j][posX+i] == gegner)
         	{
         		int n = 2;
-        		while((0 <= posY+ j*n && posY + j*n < GROESSE_Y && 0 <= posX + i*n && posX + i*n < GROESSE_X))
+        		while(aufSpielfeld(posY+ j*n, posX + i*n))
         		{
         			if(spielfeld[posY + j*n][posX + i*n] == aktuellerSpieler) return true;
         			if(spielfeld[posY + j*n][posX + i*n] == 0) break;
@@ -214,6 +214,7 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
     int gegner = 3 - aktuellerSpieler;
 
     //Alle Richtungen bearbeiten
+    spielfeld[posY][posX] = aktuellerSpieler;
     for (int j = -1; j <= 1; j++)
     {
         for (int i = -1; i <= 1; i++)
@@ -225,14 +226,15 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
         	if(spielfeld[posY+j][posX+i] == gegner)
         		{
         	    	int n = 2;
-        	    	while((0 <= posY+ j*n && posY + j*n < GROESSE_Y && 0 <= posX + i*n && posX + i*n < GROESSE_X))
+        	    	while(aufSpielfeld(posY+ j*n, posX + i*n))
         	        {
         	    		if(spielfeld[posY + j*n][posX + i*n] == aktuellerSpieler)
         	    		{
-        	    			for(int r = 2; r < n; r++)
+        	    			for(int r = 1; r < n; r++)
         	    			{
         	    				spielfeld[posY + j*r][posX + i*r] = aktuellerSpieler;
         	    			}
+        	    			break;
         	    		}
         	        	if(spielfeld[posY + j*n][posX + i*n] == 0) break;
         	        	n++;

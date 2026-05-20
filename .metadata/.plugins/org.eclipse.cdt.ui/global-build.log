@@ -537,3 +537,365 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp"
   306 |     int aktuellerSpieler = 1;
       |         ^~~~~~~~~~~~~~~~
 g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:39:40 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:574:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  574 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:596:13: warning: unused variable 'spieler' [-Wunused-variable]
+  596 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:597:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  597 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:53: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+  191 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
+      |                                                     ^
+..\othello.cpp:191:65: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+  191 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
+      |                                                                 ^
+..\othello.cpp:191:65: warning: comparing the result of pointer addition '(aufSpielfeld + (((sizetype)((j * n) + ((int)posY))) + ((sizetype)((i * n) + ((int)posX)))))' and NULL [-Waddress]
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:228:53: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+  228 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
+      |                                                     ^
+..\othello.cpp:228:65: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+  228 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
+      |                                                                 ^
+..\othello.cpp:228:65: warning: comparing the result of pointer addition '(aufSpielfeld + (((sizetype)((j * n) + ((int)posY))) + ((sizetype)((i * n) + ((int)posX)))))' and NULL [-Waddress]
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:307:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  307 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+Info: Nothing to build for Versuch03
+14:42:52 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:307:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  307 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:43:59 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:574:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  574 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:596:13: warning: unused variable 'spieler' [-Wunused-variable]
+  596 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:597:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  597 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:47:27 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:308:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  308 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:51:23 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool zugAusfuehrenTest(int (*)[8], const int (*)[8], int, int, int, int)':
+..\test.cpp:146:27: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::ostream' {aka 'std::basic_ostream<char>'})
+  146 |                 std::cout <<
+      |                 ~~~~~~~~~ ^~
+      |                      |
+      |                      basic_ostream<[...]>
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~~~~~  
+      |                      |
+      |                      basic_ostream<[...]>
+..\test.cpp:146:27: note: there are 34 candidates
+  146 |                 std::cout <<
+      |                 ~~~~~~~~~~^~
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~~~~~  
+..\test.cpp:146:27: note: candidate 1: 'operator<<(int, int)' (built-in)
+..\test.cpp:146:27: note: no known conversion for argument 2 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'int'
+In file included from C:/msys64/mingw64/include/c++/15.2.0/ostream:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/iostream:43,
+                 from ..\test.cpp:10:
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:116:7: note: candidate 2: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ostream_type& (*)(__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  116 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:116:36: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
+  116 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:125:7: note: candidate 3: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ios_type& (*)(__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>]'
+  125 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:125:32: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
+  125 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:135:7: note: candidate 4: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  135 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:135:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::ios_base& (*)(std::ios_base&)'
+  135 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:174:7: note: candidate 5: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  174 |       operator<<(long __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:174:23: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long int'
+  174 |       operator<<(long __n)
+      |                  ~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:178:7: note: candidate 6: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  178 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:178:32: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long unsigned int'
+  178 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:182:7: note: candidate 7: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  182 |       operator<<(bool __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:182:23: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'bool'
+  182 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/ostream:294:
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:100:5: note: candidate 8: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  100 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:101:22: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'short int'
+  101 |     operator<<(short __n)
+      |                ~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:189:7: note: candidate 9: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  189 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:189:33: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'short unsigned int'
+  189 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:114:5: note: candidate 10: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  114 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:115:20: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'int'
+  115 |     operator<<(int __n)
+      |                ~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:200:7: note: candidate 11: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  200 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:200:31: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'unsigned int'
+  200 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:211:7: note: candidate 12: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  211 |       operator<<(long long __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:211:28: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long long int'
+  211 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:215:7: note: candidate 13: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  215 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:215:37: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long long unsigned int'
+  215 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:231:7: note: candidate 14: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  231 |       operator<<(double __f)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:231:25: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'double'
+  231 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:235:7: note: candidate 15: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  235 |       operator<<(float __f)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:235:24: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'float'
+  235 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:243:7: note: candidate 16: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  243 |       operator<<(long double __f)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:243:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long double'
+  243 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:301:7: note: candidate 17: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  301 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:301:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'const void*'
+  301 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:306:7: note: candidate 18: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]'
+  306 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:306:18: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::nullptr_t'
+  306 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:128:5: note: candidate 19: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>]'
+  128 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:129:34: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
+  129 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:51,
+                 from C:/msys64/mingw64/include/c++/15.2.0/string:56,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h:42,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:43,
+                 from C:/msys64/mingw64/include/c++/15.2.0/ios:46,
+                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:43:
+C:/msys64/mingw64/include/c++/15.2.0/string_view:767:5: note: candidate 20: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, basic_string_view<_CharT, _Traits>)'
+  767 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/string_view:767:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   'std::basic_ostream<char>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                      ^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:4367:5: note: candidate 21: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4367 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:4367:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                      ^~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/memory_resource.h:40,
+                 from C:/msys64/mingw64/include/c++/15.2.0/string:72:
+C:/msys64/mingw64/include/c++/15.2.0/cstddef:130:5: note: candidate 22: 'template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(byte, _IntegerType)'
+  130 |     operator<<(byte __b, _IntegerType __shift) noexcept
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/cstddef:130:5: note: template argument deduction/substitution failed:
+..\test.cpp:146:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'std::byte'
+  146 |                 std::cout <<
+      |                 ~~~~~^~~~
+In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:48:
+C:/msys64/mingw64/include/c++/15.2.0/system_error:341:5: note: candidate 23: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const error_code&)'
+  341 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/system_error:341:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const std::error_code&'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:626:5: note: candidate 24: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _CharT)'
+  626 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:626:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::basic_ostream<char>')
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                      ^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:636:5: note: candidate 25: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, char)'
+  636 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:636:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'char'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:642:5: note: candidate 26: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, char)'
+  642 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:642:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'char'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:653:5: note: candidate 27: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, signed char)'
+  653 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:653:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'signed char'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:658:5: note: candidate 28: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, unsigned char)'
+  658 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:658:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'unsigned char'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:717:5: note: candidate 29: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const _CharT*)'
+  717 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:717:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   mismatched types 'const _CharT*' and 'std::basic_ostream<char>'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                      ^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:311:5: note: candidate 30: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const char*)'
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:311:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const char*'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:734:5: note: candidate 31: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const char*)'
+  734 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:734:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const char*'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:747:5: note: candidate 32: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const signed char*)'
+  747 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:747:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const signed char*'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:752:5: note: candidate 33: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const unsigned char*)'
+  752 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:752:5: note: template argument deduction/substitution failed:
+..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const unsigned char*'
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                 ~~~~~^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: note: candidate 34: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
+  836 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: note: template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::basic_ostream<char>]':
+..\test.cpp:147:8:   required from here
+  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
+      |                      ^~~~
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+  836 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:577:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  577 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:599:13: warning: unused variable 'spieler' [-Wunused-variable]
+  599 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:600:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  600 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+14:51:40 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:576:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  576 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:598:13: warning: unused variable 'spieler' [-Wunused-variable]
+  598 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:599:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  599 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:53:33 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:579:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  579 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:601:13: warning: unused variable 'spieler' [-Wunused-variable]
+  601 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:602:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  602 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:57:57 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:308:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  308 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
