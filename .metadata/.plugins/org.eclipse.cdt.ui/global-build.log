@@ -398,3 +398,142 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp"
   288 |     int aktuellerSpieler = 1;
       |         ^~~~~~~~~~~~~~~~
 g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:17:09 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:322:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  322 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:424:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  424 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:525:13: warning: unused variable 'spieler' [-Wunused-variable]
+  525 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:526:13: warning: unused variable 'position' [-Wunused-variable]
+  526 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:549:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  549 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:571:13: warning: unused variable 'spieler' [-Wunused-variable]
+  571 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:572:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  572 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:18:35 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:213:9: warning: unused variable 'gegner' [-Wunused-variable]
+  213 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:289:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  289 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:28:15 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:322:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  322 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:424:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  424 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:525:13: warning: unused variable 'spieler' [-Wunused-variable]
+  525 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:526:13: warning: unused variable 'position' [-Wunused-variable]
+  526 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:549:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  549 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:571:13: warning: unused variable 'spieler' [-Wunused-variable]
+  571 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:572:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  572 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+13:19:38 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
+  188 |                 int pos = spielfeld[posX+i][posY+j];
+      |                     ^~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:214:9: warning: unused variable 'gegner' [-Wunused-variable]
+  214 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:290:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  290 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+13:29:11 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
+  188 |                 int pos = spielfeld[posX+j][posY+i];
+      |                     ^~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:214:9: warning: unused variable 'gegner' [-Wunused-variable]
+  214 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:290:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  290 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+Info: Nothing to build for Versuch03
+Info: Nothing to build for Versuch03
+13:38:22 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
+  188 |                 int pos = spielfeld[posX+j][posY+i];
+      |                     ^~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:215:9: warning: unused variable 'gegner' [-Wunused-variable]
+  215 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:291:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  291 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+Info: Nothing to build for Versuch03
+13:49:10 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
+  188 |                 int pos = spielfeld[posY+j][posX+i];
+      |                     ^~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:215:9: warning: unused variable 'gegner' [-Wunused-variable]
+  215 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:291:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  291 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+14:01:38 **** Incremental Build of configuration Debug for project Versuch03 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:306:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  306 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 

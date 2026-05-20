@@ -14,3 +14,4 @@ org.eclipse.launchbar.core.descriptorType.default\:Fibonacci.exe/activeLaunchTar
 org.eclipse.launchbar.core.descriptorType.default\:Versuch01Teil1.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Versuch01Teil1.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Versuch02Teil2.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Versuch03.exe/activeLaunchMode=run

@@ -185,12 +185,14 @@ bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSp
         for (int i = -1; i <= 1; i++)
         {
             // Hier erfolgt jetzt Ihre Implementierung ...
-        	if(spielfeld[posX+i][posY+j] == gegner)
+        	if(spielfeld[posY+j][posX+i] == gegner)
         	{
         		int n = 2;
-        		while((0 <= posX + i*n && posX + i*n < GROESSE_X && 0 <= posY + j*n && posY + j*n < GROESSE_Y))
+        		while((0 <= posY+ j*n && posY + j*n < GROESSE_Y && 0 <= posX + i*n && posX + i*n < GROESSE_X))
         		{
-        			if(spielfeld[posX + i*n][posY + j*n] == aktuellerSpieler) return true;
+        			if(spielfeld[posY + j*n][posX + i*n] == aktuellerSpieler) return true;
+        			if(spielfeld[posY + j*n][posX + i*n] == 0) break;
+        			n++;
         		}
         	}
         }
@@ -220,6 +222,22 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
             // allen Richtungen in Ihre eigenen Steine umgewandelt werden
             //
             // Hier erfolgt jetzt Ihre Implementierung ...
+        	if(spielfeld[posY+j][posX+i] == gegner)
+        		{
+        	    	int n = 2;
+        	    	while((0 <= posY+ j*n && posY + j*n < GROESSE_Y && 0 <= posX + i*n && posX + i*n < GROESSE_X))
+        	        {
+        	    		if(spielfeld[posY + j*n][posX + i*n] == aktuellerSpieler)
+        	    		{
+        	    			for(int r = 2; r < n; r++)
+        	    			{
+        	    				spielfeld[posY + j*r][posX + i*r] = aktuellerSpieler;
+        	    			}
+        	    		}
+        	        	if(spielfeld[posY + j*n][posX + i*n] == 0) break;
+        	        	n++;
+        	        }
+        		}
         }
     }
 
