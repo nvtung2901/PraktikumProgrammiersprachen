@@ -1,110 +1,400 @@
-14:01:09 **** Rebuild of configuration Debug for project Versuch02Teil3 ****
+15:51:25 **** Rebuild of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:01:14 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:173:9: warning: unused variable 'gegner' [-Wunused-variable]
+  173 |     int gegner = 3 - aktuellerSpieler; // dasselbe wie: if aktuellerSpieler == 1 -> gegner = 2
+      |         ^~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:203:9: warning: unused variable 'gegner' [-Wunused-variable]
+  203 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:279:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  279 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othelloKI.o "..\\othelloKI.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:176:13: warning: unused variable 'position' [-Wunused-variable]
+  176 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:177:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  177 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:187:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  187 |         int eingabeFeld[7][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:260:13: warning: unused variable 'spieler' [-Wunused-variable]
+  260 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
+      |             ^~~~~~~
+..\test.cpp:261:13: warning: unused variable 'position' [-Wunused-variable]
+  261 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:262:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  262 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:273:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  273 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:375:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  375 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:476:13: warning: unused variable 'spieler' [-Wunused-variable]
+  476 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:477:13: warning: unused variable 'position' [-Wunused-variable]
+  477 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:500:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  500 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:522:13: warning: unused variable 'spieler' [-Wunused-variable]
+  522 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:523:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  523 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+Info: Nothing to build for Versuch03
+10:43:16 **** Rebuild of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
-   24 |                                 wort[i] == schluessel[1][j];
-..\Verschluesselung.cpp: In function 'int main()':
-..\Verschluesselung.cpp:43:35: error: initializer-string for 'char [26]' is too long [-fpermissive]
-   43 |         char schluessel[2][26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:44:59: error: initializer-string for 'char [26]' is too long [-fpermissive]
-   44 |                                                           "HIJKLMNOPQRSTUVWXYZABCDEFG"};
-      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-14:01:46 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
+..\othello.cpp:153:21: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |            ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:14: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |            ~~^~~~~~
+..\othello.cpp:153:46: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |                                     ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:39: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |                                     ~~^~~~~~
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:174:9: warning: unused variable 'gegner' [-Wunused-variable]
+  174 |     int gegner = 3 - aktuellerSpieler; // dasselbe wie: if aktuellerSpieler == 1 -> gegner = 2
+      |         ^~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:204:9: warning: unused variable 'gegner' [-Wunused-variable]
+  204 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:280:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  280 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:193:13: warning: unused variable 'position' [-Wunused-variable]
+  193 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:194:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  194 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:204:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  204 |         int eingabeFeld[7][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:277:13: warning: unused variable 'spieler' [-Wunused-variable]
+  277 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
+      |             ^~~~~~~
+..\test.cpp:278:13: warning: unused variable 'position' [-Wunused-variable]
+  278 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:279:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  279 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:290:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  290 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:392:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  392 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:493:13: warning: unused variable 'spieler' [-Wunused-variable]
+  493 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:494:13: warning: unused variable 'position' [-Wunused-variable]
+  494 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:517:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  517 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:539:13: warning: unused variable 'spieler' [-Wunused-variable]
+  539 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:540:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  540 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othelloKI.o "..\\othelloKI.cpp" 
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+10:46:06 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp:43:35: warning: multi-character literal with 26 characters exceeds 'int' size of 4 bytes
-   43 |         char schluessel[2][26] = {'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:44:59: warning: multi-character literal with 26 characters exceeds 'int' size of 4 bytes
-   44 |                                                           'HIJKLMNOPQRSTUVWXYZABCDEFG'};
-      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
-   24 |                                 wort[i] == schluessel[1][j];
-..\Verschluesselung.cpp: In function 'int main()':
-..\Verschluesselung.cpp:43:35: error: narrowing conversion of '1465407834' from 'int' to 'char' [-Wnarrowing]
-   43 |         char schluessel[2][26] = {'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:44:59: error: narrowing conversion of '1145390663' from 'int' to 'char' [-Wnarrowing]
-   44 |                                                           'HIJKLMNOPQRSTUVWXYZABCDEFG'};
-      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-14:07:10 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:192:13: warning: unused variable 'position' [-Wunused-variable]
+  192 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:193:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  193 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:203:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  203 |         int eingabeFeld[7][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:276:13: warning: unused variable 'spieler' [-Wunused-variable]
+  276 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
+      |             ^~~~~~~
+..\test.cpp:277:13: warning: unused variable 'position' [-Wunused-variable]
+  277 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:278:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  278 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:289:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  289 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:391:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  391 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:492:13: warning: unused variable 'spieler' [-Wunused-variable]
+  492 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:493:13: warning: unused variable 'position' [-Wunused-variable]
+  493 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:516:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  516 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:538:13: warning: unused variable 'spieler' [-Wunused-variable]
+  538 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:539:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  539 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+11:33:28 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-..\Verschluesselung.cpp:24:41: warning: value computed is not used [-Wunused-value]
-   24 |                                 wort[i] == schluessel[1][j];
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:08:03 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
+..\othello.cpp:153:21: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |            ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:14: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |            ~~^~~~~~
+..\othello.cpp:153:46: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |                                     ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:39: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
+      |                                     ~~^~~~~~
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+11:51:25 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-Info: Nothing to build for Versuch02Teil3
-14:09:39 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'bool ganzenTestAusfuehren()':
+..\test.cpp:228:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  228 |         int eingabeFeld[7][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:301:13: warning: unused variable 'spieler' [-Wunused-variable]
+  301 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
+      |             ^~~~~~~
+..\test.cpp:302:13: warning: unused variable 'position' [-Wunused-variable]
+  302 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
+      |             ^~~~~~~~
+..\test.cpp:303:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  303 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
+      |              ^~~~~~~~~~~~~~~~~
+..\test.cpp:314:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  314 |         int eingabeFeld[10][8][8] = {
+      |             ^~~~~~~~~~~
+..\test.cpp:416:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
+  416 |         int ergebnisFeld[10][8][8] {
+      |             ^~~~~~~~~~~~
+..\test.cpp:517:13: warning: unused variable 'spieler' [-Wunused-variable]
+  517 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
+      |             ^~~~~~~
+..\test.cpp:518:13: warning: unused variable 'position' [-Wunused-variable]
+  518 |         int position[10][2]=                       // eine andere, moegliche Darstellung
+      |             ^~~~~~~~
+..\test.cpp:541:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
+  541 |         int eingabeFeld[2][8][8] {
+      |             ^~~~~~~~~~~
+..\test.cpp:563:13: warning: unused variable 'spieler' [-Wunused-variable]
+  563 |         int spieler[2] = {1, 1};
+      |             ^~~~~~~
+..\test.cpp:564:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
+  564 |         int korrektesErgebnis[2] = {4, 5};
+      |             ^~~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+11:54:46 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[26], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:10:25 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
+..\othello.cpp:153:22: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
+      |             ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:15: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
+      |             ~~^~~~~~
+..\othello.cpp:153:49: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
+      |                                        ~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:153:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
+      |                                        ~~^~~~~~
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+11:59:52 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-Info: Nothing to build for Versuch02Teil3
-14:11:28 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:04:28 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:11:55 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:07:23 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-..\Verschluesselung.cpp: In function 'std::string verschluesseln(char (*)[27], std::string)':
-..\Verschluesselung.cpp:18:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
-   18 |         for(int i = 0; i < wort.length(); i++)
-      |                        ~~^~~~~~~~~~~~~~~
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:12:18 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:07:37 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:13:09 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
+..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                ~~^~~~~~~~~~~~
+..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
+      |                                                                 ~~^~~~~~~~~~~~
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+12:11:14 **** Incremental Build of configuration Debug for project Versuch03 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:14:19 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:20:39 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
-14:26:36 **** Incremental Build of configuration Debug for project Versuch02Teil3 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Verschluesselung.o "..\\Verschluesselung.cpp" 
-g++ -o Versuch02Teil3.exe Verschluesselung.o 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
+..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
+..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
+  212 |     int gegner = 3 - aktuellerSpieler;
+      |         ^~~~~~
+..\othello.cpp: In function 'void spielen(const int*)':
+..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
+  288 |     int aktuellerSpieler = 1;
+      |         ^~~~~~~~~~~~~~~~
+g++ -o Versuch03.exe othello.o othelloKI.o test.o 
