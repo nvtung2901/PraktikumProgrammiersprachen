@@ -212,6 +212,10 @@ bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSp
 void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler, const int posX, const int posY)
 {
     int gegner = 3 - aktuellerSpieler;
+    if (spielfeld[posY][posX] != 0) // ist das Feld leer?
+    {
+    	return;
+    }
 
     //Alle Richtungen bearbeiten
     spielfeld[posY][posX] = aktuellerSpieler;
@@ -248,8 +252,18 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
 int moeglicheZuege(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler)
 {
     // Hier erfolgt jetzt Ihre Implementierung ...
-    
-    return 0;
+    int anzahl = 0;
+	for(int j = 0; j < GROESSE_Y; j++)
+    {
+    	for(int i = 0; i < GROESSE_X; i++)
+    	{
+    		if(zugGueltig(spielfeld, aktuellerSpieler, i, j))
+    		{
+    			anzahl++;
+    		}
+    	}
+    }
+    return anzahl;
 }
 
 
@@ -300,22 +314,59 @@ bool menschlicherZug(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpi
 
 void spielen(const int spielerTyp[2])
 {
-    int spielfeld[GROESSE_Y][GROESSE_X];
+    int loop = 1;
+	while(loop)
+	{
+		int spielfeld[GROESSE_Y][GROESSE_X];
 
-    //Erzeuge Startaufstellung
-    initialisiereSpielfeld(spielfeld);
+		//Erzeuge Startaufstellung
+		initialisiereSpielfeld(spielfeld);
 
-    int aktuellerSpieler = 1;
-    zeigeSpielfeld(spielfeld);
+		int aktuellerSpieler = 1;
+		zeigeSpielfeld(spielfeld);
 
-    // solange noch Zuege bei einem der beiden Spieler moeglich sind
-    //
-    // Hier erfolgt jetzt Ihre Implementierung ...
-    
-    switch (gewinner(spielfeld))
-    {
-        // Hier erfolgt jetzt Ihre Implementierung ...
-    }
+		// solange noch Zuege bei einem der beiden Spieler moeglich sind
+		//
+		// Hier erfolgt jetzt Ihre Implementierung ...
+		while(moeglicheZuege(spielfeld, 1) || moeglicheZuege(spielfeld, 2))
+		{
+			bool check;
+			if(spielerTyp[aktuellerSpieler-1] == MENSCH)
+			{
+				check = menschlicherZug(spielfeld, aktuellerSpieler);
+			}
+			else
+			{
+				check = computerZug(spielfeld, aktuellerSpieler);
+			}
+			zeigeSpielfeld(spielfeld);
+			if(!check)
+			{
+				std::cout << "Spieler " << aktuellerSpieler << " hat keine gueltigen Zuege." << std::endl;
+			}
+			if(aktuellerSpieler == 1) aktuellerSpieler = 2;
+			else aktuellerSpieler = 1;
+		}
+		std::cout << "END" << std::endl;
+		switch (gewinner(spielfeld))
+		{
+			// Hier erfolgt jetzt Ihre Implementierung ...
+			case 0:
+				std::cout << "Spiel unentschieden!" << std::endl;
+				break;
+			case 1:
+				std::cout << "Spieler 1 ist der Gewinner!" << std::endl;
+				break;
+			case 2:
+				std::cout << "Spieler 2 ist der Gewinner!" << std::endl;
+				break;
+			default:
+				std::cout << "ERROR 404" << std::endl;
+
+		}
+		std::cout << "\nMoechten Sie weiter spieler? Y(1)/N(0) ";
+		std::cin >> loop;
+	}
 }
 
 int main()
@@ -347,6 +398,36 @@ int main()
     // spielen(spielerTyp);
     //
     // Hier erfolgt jetzt Ihre Implementierung ...
+    //int spielerTyp [2] = { MENSCH , MENSCH };
+    //spielen ( spielerTyp );
     
+    int ein[2] = {1, 1};
+    int spielerTyp[2];
+    std::cout << "\nWillkommen zum OTHELLO! Wer will mitspielen?" << std::endl;
+
+    for(int i = 0; i < 2; i++)
+    {
+    	while(ein[i])
+    	{
+    		std::cout << "Spieler " << i+1 << " ? MENSCH(1), COMPUTER(2): ";
+    		std::cin >> spielerTyp[i];
+    		switch (spielerTyp[i])
+    		{
+    			case 1:
+    				spielerTyp[i] = MENSCH;
+    				ein[i] = 0;
+    				break;
+    			case 2:
+    				spielerTyp[i] = COMPUTER;
+    				ein[i] = 0;
+    				break;
+    			default:
+    				std::cout << "Ungueltige Eingabe. Versuchen Sie bitte noch einmal." << std::endl;
+    		}
+    	}
+    }
+    spielen(spielerTyp);
+    std::cout << "\nVielen Dank fuers Mitspielen!" << std::endl;
+
     return 0;
 }

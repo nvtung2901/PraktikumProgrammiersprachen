@@ -162,8 +162,25 @@ bool moeglicheZuegeTest(const int eingabeFeld[GROESSE_Y][GROESSE_X], const int s
     // wenn AUSFUEHRLICH gleich 1 wird zusaetzlich das Spielfeld, der berechnete falsche und der richtige Wert ausgegeben
     //
     // Hier erfolgt jetzt Ihre Implementierung ...
-
-    return 0;
+	std::cout << "Fuehre Test " << testNummer + 1 << " fuer 'moeglicheZuege()' aus ..." << std::endl;
+	std::cout << "----------------------------------" << std::endl << std::endl;
+	int ergebnis = moeglicheZuege(eingabeFeld, spieler);
+	if (ergebnis == richtig)
+	{
+		std::cout << "Test " << testNummer + 1 << " bestanden!" << std::endl << std::endl;
+		return true;
+	}
+	else
+	{
+		std::cout << "Test " << testNummer + 1 << " fehlgeschlagen" << std::endl << std::endl;
+		if (AUSFUEHRLICH == 1)
+		{
+			zeigeSpielfeld(eingabeFeld);
+		    std::cout << std::endl << "Berechnetes Ergebnis: " << ergebnis << std::endl << "Richtiges Ergebnis: " << richtig
+		              << std::endl << std::endl;
+		}
+		return false;
+	}
 }
 
 /**
@@ -604,8 +621,16 @@ bool ganzenTestAusfuehren()
         for (int i = 0; i < 2; i++)
         {
             // Hier erfolgt jetzt Ihre Implementierung (entsprechende Testfunktion aufrufen) ...
+        	bool tmp_ergebnis = moeglicheZuegeTest(eingabeFeld[i], spieler[i], korrektesErgebnis[i], i);
+        	if (gesamtErgebnis == true && tmp_ergebnis == false)
+        	{
+        		gesamtErgebnis = false;
+        	}
 
         }
+
+        std::cout << "Ende des Tests fuer 'moeglicheZuege()'" << std::endl << std::endl;
+
     }
 
     return gesamtErgebnis;
