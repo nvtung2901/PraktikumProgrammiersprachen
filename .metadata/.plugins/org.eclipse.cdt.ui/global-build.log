@@ -1,979 +1,392 @@
-15:51:25 **** Rebuild of configuration Debug for project Versuch03 ****
+07:22:38 **** Rebuild of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:173:9: warning: unused variable 'gegner' [-Wunused-variable]
-  173 |     int gegner = 3 - aktuellerSpieler; // dasselbe wie: if aktuellerSpieler == 1 -> gegner = 2
-      |         ^~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:203:9: warning: unused variable 'gegner' [-Wunused-variable]
-  203 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:279:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  279 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othelloKI.o "..\\othelloKI.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:176:13: warning: unused variable 'position' [-Wunused-variable]
-  176 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:177:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  177 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:187:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  187 |         int eingabeFeld[7][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:260:13: warning: unused variable 'spieler' [-Wunused-variable]
-  260 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
-      |             ^~~~~~~
-..\test.cpp:261:13: warning: unused variable 'position' [-Wunused-variable]
-  261 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:262:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  262 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:273:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  273 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:375:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  375 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:476:13: warning: unused variable 'spieler' [-Wunused-variable]
-  476 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:477:13: warning: unused variable 'position' [-Wunused-variable]
-  477 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:500:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  500 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:522:13: warning: unused variable 'spieler' [-Wunused-variable]
-  522 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:523:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  523 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-Info: Nothing to build for Versuch03
-10:43:16 **** Rebuild of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+Info: Nothing to build for Versuch04
+07:30:04 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
-..\othello.cpp:153:21: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |            ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:14: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |            ~~^~~~~~
-..\othello.cpp:153:46: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |                                     ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:39: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |                                     ~~^~~~~~
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:174:9: warning: unused variable 'gegner' [-Wunused-variable]
-  174 |     int gegner = 3 - aktuellerSpieler; // dasselbe wie: if aktuellerSpieler == 1 -> gegner = 2
-      |         ^~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:204:9: warning: unused variable 'gegner' [-Wunused-variable]
-  204 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:280:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  280 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:193:13: warning: unused variable 'position' [-Wunused-variable]
-  193 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:194:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  194 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:204:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  204 |         int eingabeFeld[7][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:277:13: warning: unused variable 'spieler' [-Wunused-variable]
-  277 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
-      |             ^~~~~~~
-..\test.cpp:278:13: warning: unused variable 'position' [-Wunused-variable]
-  278 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:279:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  279 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:290:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  290 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:392:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  392 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:493:13: warning: unused variable 'spieler' [-Wunused-variable]
-  493 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:494:13: warning: unused variable 'position' [-Wunused-variable]
-  494 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:517:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  517 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:539:13: warning: unused variable 'spieler' [-Wunused-variable]
-  539 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:540:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  540 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othelloKI.o "..\\othelloKI.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-10:46:06 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp:22:8: error: declaration of 'Vektor Vektor::sub(const Vektor&) const' outside of class is not definition [-fpermissive]
+   22 | Vektor Vektor::sub(const Vektor& input) const;
+      |        ^~~~~~
+..\Vektor.cpp:23:1: error: expected unqualified-id before '{' token
+   23 | {
+      | ^
+..\Vektor.cpp:28:8: error: declaration of 'double Vektor::laenge() const' outside of class is not definition [-fpermissive]
+   28 | double Vektor::laenge() const;
+      |        ^~~~~~
+..\Vektor.cpp:29:8: error: declaration of 'double Vektor::skalarProd(const Vektor&) const' outside of class is not definition [-fpermissive]
+   29 | double Vektor::skalarProd(const Vektor& input) const;
+      |        ^~~~~~
+..\Vektor.cpp:30:8: error: declaration of 'double Vektor::winkel(const Vektor&) const' outside of class is not definition [-fpermissive]
+   30 | double Vektor::winkel(const Vektor& input) const;
+      |        ^~~~~~
+..\Vektor.cpp:31:6: error: declaration of 'void Vektor::rotiereUmZ(double)' outside of class is not definition [-fpermissive]
+   31 | void Vektor::rotiereUmZ(const double rad);
+      |      ^~~~~~
+07:31:42 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:192:13: warning: unused variable 'position' [-Wunused-variable]
-  192 |         int position[6][2] = { {2, 3}, {0, 8}, {-1, 7}, {2, -1}, {8, 5}, {-1,8} };   // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:193:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  193 |         bool korrektesErgebnis[6] = {true, false, false, false, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:203:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  203 |         int eingabeFeld[7][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:276:13: warning: unused variable 'spieler' [-Wunused-variable]
-  276 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
-      |             ^~~~~~~
-..\test.cpp:277:13: warning: unused variable 'position' [-Wunused-variable]
-  277 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:278:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  278 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:289:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  289 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:391:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  391 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:492:13: warning: unused variable 'spieler' [-Wunused-variable]
-  492 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:493:13: warning: unused variable 'position' [-Wunused-variable]
-  493 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:516:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  516 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:538:13: warning: unused variable 'spieler' [-Wunused-variable]
-  538 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:539:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  539 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-11:33:28 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp:22:8: error: declaration of 'Vektor Vektor::sub(const Vektor&) const' outside of class is not definition [-fpermissive]
+   22 | Vektor Vektor::sub(const Vektor& input) const;
+      |        ^~~~~~
+..\Vektor.cpp:23:1: error: expected unqualified-id before '{' token
+   23 | {
+      | ^
+07:32:22 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
-..\othello.cpp:153:21: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |            ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:14: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |            ~~^~~~~~
-..\othello.cpp:153:46: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |                                     ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:39: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if(0 < posX <= GROESSE_X && 0 < posY <= GROESSE_Y) return true;
-      |                                     ~~^~~~~~
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-11:51:25 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp: In member function 'Vektor Vektor::sub(const Vektor&) const':
+..\Vektor.cpp:24:17: error: assignment of member 'Vektor::x' in read-only object
+   24 |         this->x -= input.x;
+      |         ~~~~~~~~^~~~~~~~~~
+..\Vektor.cpp:25:17: error: assignment of member 'Vektor::y' in read-only object
+   25 |         this->y -= input.y;
+      |         ~~~~~~~~^~~~~~~~~~
+..\Vektor.cpp:26:17: error: assignment of member 'Vektor::z' in read-only object
+   26 |         this->z -= input.z;
+      |         ~~~~~~~~^~~~~~~~~~
+..\Vektor.cpp:27:17: error: lvalue required as unary '&' operand
+   27 |         return &this;
+      |                 ^~~~
+07:35:09 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:228:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  228 |         int eingabeFeld[7][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:301:13: warning: unused variable 'spieler' [-Wunused-variable]
-  301 |         int spieler[7] = {1, 2, 2, 1, 2, 1,1};
-      |             ^~~~~~~
-..\test.cpp:302:13: warning: unused variable 'position' [-Wunused-variable]
-  302 |         int position[7][2] = { {2, 3}, {0, 3}, {4, 3}, {3, 4}, {3, 5}, {3, 4}, {5, 7} };  // posX, posY
-      |             ^~~~~~~~
-..\test.cpp:303:14: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  303 |         bool korrektesErgebnis[7] = {false, false, false, true, true, false, false};
-      |              ^~~~~~~~~~~~~~~~~
-..\test.cpp:314:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  314 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:416:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  416 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:517:13: warning: unused variable 'spieler' [-Wunused-variable]
-  517 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:518:13: warning: unused variable 'position' [-Wunused-variable]
-  518 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:541:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  541 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:563:13: warning: unused variable 'spieler' [-Wunused-variable]
-  563 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:564:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  564 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-11:54:46 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+07:38:20 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool aufSpielfeld(int, int)':
-..\othello.cpp:153:22: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
-      |             ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:15: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
-      |             ~~^~~~~~
-..\othello.cpp:153:49: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
-      |                                        ~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:153:42: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  153 |         if((0 < posX <= GROESSE_X) && (0 < posY <= GROESSE_Y)) return true;
-      |                                        ~~^~~~~~
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-11:59:52 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp:33:8: error: declaration of 'double Vektor::skalarProd(const Vektor&) const' outside of class is not definition [-fpermissive]
+   33 | double Vektor::skalarProd(const Vektor& input) const;
+      |        ^~~~~~
+..\Vektor.cpp:34:1: error: expected unqualified-id before '{' token
+   34 | {
+      | ^
+07:38:26 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:04:28 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+07:45:27 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:07:23 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+07:52:35 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:07:37 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:19:15 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:47: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:34: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                ~~^~~~~~~~~~~~
-..\othello.cpp:191:80: warning: comparison of constant '8' with boolean expression is always true [-Wbool-compare]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~
-..\othello.cpp:191:67: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
-  191 |                         while((0 < posX + i*n <= GROESSE_X) && (0 < posY + j*n <= GROESSE_Y))
-      |                                                                 ~~^~~~~~~~~~~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:11:14 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:10:28: error: expected ')' before ';' token
+   10 | #define ERDRADIUS 6371000.0;
+      |                            ^
+..\main.cpp:23:25: note: in expansion of macro 'ERDRADIUS'
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                         ^~~~~~~~~
+..\main.cpp:23:21: note: to match this '('
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                     ^
+..\main.cpp:23:34: error: expected primary-expression before ',' token
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                                  ^
+..\main.cpp:10:28: error: expected ')' before ';' token
+   10 | #define ERDRADIUS 6371000.0;
+      |                            ^
+..\main.cpp:24:30: note: in expansion of macro 'ERDRADIUS'
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                              ^~~~~~~~~
+..\main.cpp:24:26: note: to match this '('
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                          ^
+..\main.cpp:24:42: error: 'KORPER' was not declared in this scope; did you mean 'KORER'?
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                                          ^~~~~~
+      |                                          KORER
+08:19:29 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:212:9: warning: unused variable 'gegner' [-Wunused-variable]
-  212 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:288:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  288 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:17:09 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:10:28: error: expected ')' before ';' token
+   10 | #define ERDRADIUS 6371000.0;
+      |                            ^
+..\main.cpp:23:25: note: in expansion of macro 'ERDRADIUS'
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                         ^~~~~~~~~
+..\main.cpp:23:21: note: to match this '('
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                     ^
+..\main.cpp:23:34: error: expected primary-expression before ',' token
+   23 |     Vektor erdRadius(0, ERDRADIUS, 0);      // bitte sinnvoll initialisieren
+      |                                  ^
+..\main.cpp:10:28: error: expected ')' before ';' token
+   10 | #define ERDRADIUS 6371000.0;
+      |                            ^
+..\main.cpp:24:30: note: in expansion of macro 'ERDRADIUS'
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                              ^~~~~~~~~
+..\main.cpp:24:26: note: to match this '('
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                          ^
+..\main.cpp:24:49: warning: left operand of comma operator has no effect [-Wunused-value]
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                                                 ^
+..\main.cpp:24:58: error: expected ';' before ')' token
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                                                          ^
+      |                                                          ;
+..\main.cpp:24:59: warning: right operand of comma operator has no effect [-Wunused-value]
+   24 |     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER + HOHE, 0); // bitte sinnvoll initialisieren
+      |                                                           ^
+08:20:22 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:322:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  322 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:424:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  424 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:525:13: warning: unused variable 'spieler' [-Wunused-variable]
-  525 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:526:13: warning: unused variable 'position' [-Wunused-variable]
-  526 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:549:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  549 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:571:13: warning: unused variable 'spieler' [-Wunused-variable]
-  571 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:572:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  572 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:18:35 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:44:12 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:213:9: warning: unused variable 'gegner' [-Wunused-variable]
-  213 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:289:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  289 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-12:28:15 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:45:16 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:322:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  322 |         int eingabeFeld[10][8][8] = {
-      |             ^~~~~~~~~~~
-..\test.cpp:424:13: warning: unused variable 'ergebnisFeld' [-Wunused-variable]
-  424 |         int ergebnisFeld[10][8][8] {
-      |             ^~~~~~~~~~~~
-..\test.cpp:525:13: warning: unused variable 'spieler' [-Wunused-variable]
-  525 |         int spieler[10]={0,0,0,1,2,0,1,2,2,1};
-      |             ^~~~~~~
-..\test.cpp:526:13: warning: unused variable 'position' [-Wunused-variable]
-  526 |         int position[10][2]=                       // eine andere, moegliche Darstellung
-      |             ^~~~~~~~
-..\test.cpp:549:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  549 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:571:13: warning: unused variable 'spieler' [-Wunused-variable]
-  571 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:572:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  572 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-13:19:38 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:49:06 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
-  188 |                 int pos = spielfeld[posX+i][posY+j];
-      |                     ^~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:214:9: warning: unused variable 'gegner' [-Wunused-variable]
-  214 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:290:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  290 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-13:29:11 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:51:45 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
-  188 |                 int pos = spielfeld[posX+j][posY+i];
-      |                     ^~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:214:9: warning: unused variable 'gegner' [-Wunused-variable]
-  214 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:290:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  290 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-Info: Nothing to build for Versuch03
-Info: Nothing to build for Versuch03
-13:38:22 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:57:30 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
-  188 |                 int pos = spielfeld[posX+j][posY+i];
-      |                     ^~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:215:9: warning: unused variable 'gegner' [-Wunused-variable]
-  215 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:291:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  291 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-Info: Nothing to build for Versuch03
-13:49:10 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+08:58:53 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:188:21: warning: unused variable 'pos' [-Wunused-variable]
-  188 |                 int pos = spielfeld[posY+j][posX+i];
-      |                     ^~~
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:215:9: warning: unused variable 'gegner' [-Wunused-variable]
-  215 |     int gegner = 3 - aktuellerSpieler;
-      |         ^~~~~~
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:291:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  291 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:01:38 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:01:23 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:306:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  306 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:39:40 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+Info: Nothing to build for Versuch04
+09:06:25 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:574:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  574 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:596:13: warning: unused variable 'spieler' [-Wunused-variable]
-  596 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:597:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  597 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'bool zugGueltig(const int (*)[8], int, int, int)':
-..\othello.cpp:191:53: warning: pointer to a function used in arithmetic [-Wpointer-arith]
-  191 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
-      |                                                     ^
-..\othello.cpp:191:65: warning: pointer to a function used in arithmetic [-Wpointer-arith]
-  191 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
-      |                                                                 ^
-..\othello.cpp:191:65: warning: comparing the result of pointer addition '(aufSpielfeld + (((sizetype)((j * n) + ((int)posY))) + ((sizetype)((i * n) + ((int)posX)))))' and NULL [-Waddress]
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:228:53: warning: pointer to a function used in arithmetic [-Wpointer-arith]
-  228 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
-      |                                                     ^
-..\othello.cpp:228:65: warning: pointer to a function used in arithmetic [-Wpointer-arith]
-  228 |                         while(aufSpielfeld[posY+ j*n][posX + i*n])
-      |                                                                 ^
-..\othello.cpp:228:65: warning: comparing the result of pointer addition '(aufSpielfeld + (((sizetype)((j * n) + ((int)posY))) + ((sizetype)((i * n) + ((int)posX)))))' and NULL [-Waddress]
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:307:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  307 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-Info: Nothing to build for Versuch03
-14:42:52 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:06:43 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:307:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  307 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:43:59 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:07:16 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:574:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  574 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:596:13: warning: unused variable 'spieler' [-Wunused-variable]
-  596 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:597:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  597 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:47:27 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:10:01 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:308:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  308 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:51:23 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp: In member function 'void Vektor::rotiereUmZ(double)':
+..\Vektor.cpp:51:25: error: 'sin' cannot be used as a function
+   51 |         double sin = sin(rad);
+      |                      ~~~^~~~~
+09:10:54 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool zugAusfuehrenTest(int (*)[8], const int (*)[8], int, int, int, int)':
-..\test.cpp:146:27: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::ostream' {aka 'std::basic_ostream<char>'})
-  146 |                 std::cout <<
-      |                 ~~~~~~~~~ ^~
-      |                      |
-      |                      basic_ostream<[...]>
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~~~~~  
-      |                      |
-      |                      basic_ostream<[...]>
-..\test.cpp:146:27: note: there are 34 candidates
-  146 |                 std::cout <<
-      |                 ~~~~~~~~~~^~
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~~~~~  
-..\test.cpp:146:27: note: candidate 1: 'operator<<(int, int)' (built-in)
-..\test.cpp:146:27: note: no known conversion for argument 2 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'int'
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:12:10 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:13:02 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:37:44: error: no match for 'operator=' (operand types are 'std::basic_ostream<char>::__ostream_type' {aka 'std::basic_ostream<char>'} and 'int')
+   37 |     std::cout << sicht.winkel(erdRadius) = 180;
+      |                                            ^~~
+..\main.cpp:37:44: note: there is 1 candidate
 In file included from C:/msys64/mingw64/include/c++/15.2.0/ostream:42,
                  from C:/msys64/mingw64/include/c++/15.2.0/iostream:43,
-                 from ..\test.cpp:10:
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:116:7: note: candidate 2: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ostream_type& (*)(__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  116 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+                 from ..\Vektor.h:13,
+                 from ..\main.cpp:9:
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:458:7: note: candidate 1: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator=(std::basic_ostream<_CharT, _Traits>&&) [with _CharT = char; _Traits = std::char_traits<char>]'
+  458 |       operator=(basic_ostream&& __rhs)
       |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:116:36: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
-  116 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
-      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:125:7: note: candidate 3: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ios_type& (*)(__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>]'
-  125 |       operator<<(__ios_type& (*__pf)(__ios_type&))
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:125:32: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
-  125 |       operator<<(__ios_type& (*__pf)(__ios_type&))
-      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:135:7: note: candidate 4: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  135 |       operator<<(ios_base& (*__pf) (ios_base&))
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:135:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::ios_base& (*)(std::ios_base&)'
-  135 |       operator<<(ios_base& (*__pf) (ios_base&))
-      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:174:7: note: candidate 5: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  174 |       operator<<(long __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:174:23: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long int'
-  174 |       operator<<(long __n)
-      |                  ~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:178:7: note: candidate 6: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  178 |       operator<<(unsigned long __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:178:32: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long unsigned int'
-  178 |       operator<<(unsigned long __n)
-      |                  ~~~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:182:7: note: candidate 7: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  182 |       operator<<(bool __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:182:23: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'bool'
-  182 |       operator<<(bool __n)
-      |                  ~~~~~^~~
-In file included from C:/msys64/mingw64/include/c++/15.2.0/ostream:294:
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:100:5: note: candidate 8: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
-  100 |     basic_ostream<_CharT, _Traits>::
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:101:22: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'short int'
-  101 |     operator<<(short __n)
-      |                ~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:189:7: note: candidate 9: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  189 |       operator<<(unsigned short __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:189:33: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'short unsigned int'
-  189 |       operator<<(unsigned short __n)
-      |                  ~~~~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:114:5: note: candidate 10: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
-  114 |     basic_ostream<_CharT, _Traits>::
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:115:20: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'int'
-  115 |     operator<<(int __n)
-      |                ~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:200:7: note: candidate 11: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  200 |       operator<<(unsigned int __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:200:31: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'unsigned int'
-  200 |       operator<<(unsigned int __n)
-      |                  ~~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:211:7: note: candidate 12: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  211 |       operator<<(long long __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:211:28: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long long int'
-  211 |       operator<<(long long __n)
-      |                  ~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:215:7: note: candidate 13: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  215 |       operator<<(unsigned long long __n)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:215:37: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long long unsigned int'
-  215 |       operator<<(unsigned long long __n)
-      |                  ~~~~~~~~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:231:7: note: candidate 14: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  231 |       operator<<(double __f)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:231:25: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'double'
-  231 |       operator<<(double __f)
-      |                  ~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:235:7: note: candidate 15: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  235 |       operator<<(float __f)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:235:24: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'float'
-  235 |       operator<<(float __f)
-      |                  ~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:243:7: note: candidate 16: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  243 |       operator<<(long double __f)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:243:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'long double'
-  243 |       operator<<(long double __f)
-      |                  ~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:301:7: note: candidate 17: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
-  301 |       operator<<(const void* __p)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:301:30: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'const void*'
-  301 |       operator<<(const void* __p)
-      |                  ~~~~~~~~~~~~^~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:306:7: note: candidate 18: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]'
-  306 |       operator<<(nullptr_t)
-      |       ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:306:18: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::nullptr_t'
-  306 |       operator<<(nullptr_t)
-      |                  ^~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:128:5: note: candidate 19: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>]'
-  128 |     basic_ostream<_CharT, _Traits>::
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:129:34: note: no known conversion for argument 1 from 'std::ostream' {aka 'std::basic_ostream<char>'} to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
-  129 |     operator<<(__streambuf_type* __sbin)
-      |                ~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:51,
-                 from C:/msys64/mingw64/include/c++/15.2.0/string:56,
-                 from C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h:42,
-                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:43,
-                 from C:/msys64/mingw64/include/c++/15.2.0/ios:46,
-                 from C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:43:
-C:/msys64/mingw64/include/c++/15.2.0/string_view:767:5: note: candidate 20: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, basic_string_view<_CharT, _Traits>)'
-  767 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/string_view:767:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   'std::basic_ostream<char>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                      ^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:4367:5: note: candidate 21: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
- 4367 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:4367:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                      ^~~~
-In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/memory_resource.h:40,
-                 from C:/msys64/mingw64/include/c++/15.2.0/string:72:
-C:/msys64/mingw64/include/c++/15.2.0/cstddef:130:5: note: candidate 22: 'template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(byte, _IntegerType)'
-  130 |     operator<<(byte __b, _IntegerType __shift) noexcept
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/cstddef:130:5: note: template argument deduction/substitution failed:
-..\test.cpp:146:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'std::byte'
-  146 |                 std::cout <<
-      |                 ~~~~~^~~~
-In file included from C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h:48:
-C:/msys64/mingw64/include/c++/15.2.0/system_error:341:5: note: candidate 23: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const error_code&)'
-  341 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/system_error:341:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const std::error_code&'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:626:5: note: candidate 24: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _CharT)'
-  626 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:626:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::basic_ostream<char>')
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                      ^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:636:5: note: candidate 25: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, char)'
-  636 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:636:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'char'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:642:5: note: candidate 26: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, char)'
-  642 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:642:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'char'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:653:5: note: candidate 27: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, signed char)'
-  653 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:653:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'signed char'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:658:5: note: candidate 28: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, unsigned char)'
-  658 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:658:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'unsigned char'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:717:5: note: candidate 29: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const _CharT*)'
-  717 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:717:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   mismatched types 'const _CharT*' and 'std::basic_ostream<char>'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                      ^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:311:5: note: candidate 30: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const char*)'
-  311 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc:311:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const char*'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:734:5: note: candidate 31: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const char*)'
-  734 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:734:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const char*'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:747:5: note: candidate 32: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const signed char*)'
-  747 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:747:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const signed char*'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:752:5: note: candidate 33: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const unsigned char*)'
-  752 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:752:5: note: template argument deduction/substitution failed:
-..\test.cpp:147:22: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'const unsigned char*'
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                 ~~~~~^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: note: candidate 34: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
-  836 |     operator<<(_Ostream&& __os, const _Tp& __x)
-      |     ^~~~~~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: note: template argument deduction/substitution failed:
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::basic_ostream<char>]':
-..\test.cpp:147:8:   required from here
-  147 |                 std::cout << std::endl << "Berechnetes Ergebnis: " << std::endl;
-      |                      ^~~~
-C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:836:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
-  836 |     operator<<(_Ostream&& __os, const _Tp& __x)
-      |     ^~~~~~~~
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:577:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  577 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:599:13: warning: unused variable 'spieler' [-Wunused-variable]
-  599 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:600:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  600 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-14:51:40 **** Incremental Build of configuration Debug for project Versuch03 ****
+C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h:458:33: note: no known conversion for argument 1 from 'int' to 'std::basic_ostream<char>&&'
+  458 |       operator=(basic_ostream&& __rhs)
+      |                 ~~~~~~~~~~~~~~~~^~~~~
+09:13:13 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:576:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  576 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:598:13: warning: unused variable 'spieler' [-Wunused-variable]
-  598 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:599:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  599 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:53:33 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:37:31: error: lvalue required as left operand of assignment
+   37 |     std::cout << (sicht.winkel(erdRadius) = 180);
+      |                   ~~~~~~~~~~~~^~~~~~~~~~~
+09:13:55 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-..\test.cpp: In function 'bool ganzenTestAusfuehren()':
-..\test.cpp:579:13: warning: unused variable 'eingabeFeld' [-Wunused-variable]
-  579 |         int eingabeFeld[2][8][8] {
-      |             ^~~~~~~~~~~
-..\test.cpp:601:13: warning: unused variable 'spieler' [-Wunused-variable]
-  601 |         int spieler[2] = {1, 1};
-      |             ^~~~~~~
-..\test.cpp:602:13: warning: unused variable 'korrektesErgebnis' [-Wunused-variable]
-  602 |         int korrektesErgebnis[2] = {4, 5};
-      |             ^~~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-14:57:57 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:37:31: error: lvalue required as left operand of assignment
+   37 |     std::cout << (sicht.winkel(erdRadius) = 180);
+      |                   ~~~~~~~~~~~~^~~~~~~~~~~
+09:14:26 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:308:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  308 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-15:15:50 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:15:22 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void zugAusfuehren(int (*)[8], int, int, int)':
-..\othello.cpp:217:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
-  217 |         return 0;
-      |                ^
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:322:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  322 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-15:16:08 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:18:56 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:322:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  322 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-15:25:44 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:20:20 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:322:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  322 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-15:26:31 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+Info: Nothing to build for Versuch04
+09:27:01 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-..\othello.cpp: In function 'void spielen(const int*)':
-..\othello.cpp:322:9: warning: unused variable 'aktuellerSpieler' [-Wunused-variable]
-  322 |     int aktuellerSpieler = 1;
-      |         ^~~~~~~~~~~~~~~~
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-16:06:20 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:30:26 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-16:07:15 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+09:38:38 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-07:44:17 **** Rebuild of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+Info: Nothing to build for Versuch04
+09:46:54 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othelloKI.o "..\\othelloKI.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-07:47:00 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:01:53 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-07:58:20 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:02:32 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-07:59:09 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:09:33 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-08:17:04 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:25:31 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-08:17:15 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:26:58 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-08:18:14 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:34:24: error: expected unqualified-id before numeric constant
+   34 |     double schritt = 0,00001;
+      |                        ^~~~~
+10:27:08 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
-08:23:03 **** Incremental Build of configuration Debug for project Versuch03 ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:27:43 **** Incremental Build of configuration Debug for project Versuch04 ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o othello.o "..\\othello.cpp" 
-g++ -o Versuch03.exe othello.o othelloKI.o test.o 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:36:03 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:39:23 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:40:41 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:45:18 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:47:02 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:47:33 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:54:08 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:55:40 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+10:57:18 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:02:45 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+..\Vektor.cpp: In member function 'double Vektor::winkel(const Vektor&) const':
+..\Vektor.cpp:43:12: error: 'laengeProd' was not declared in this scope; did you mean 'laenge'?
+   43 |         if(laengeProd == 0)
+      |            ^~~~~~~~~~
+      |            laenge
+..\Vektor.cpp:47:28: error: 'laengeProd' was not declared in this scope; did you mean 'laenge'?
+   47 |         return acos(skalar/laengeProd)*180/M_PI;
+      |                            ^~~~~~~~~~
+      |                            laenge
+..\Vektor.cpp:40:16: warning: unused variable 'l1' [-Wunused-variable]
+   40 |         double l1 = this->laenge();
+      |                ^~
+11:04:11 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:07:31 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:08:49 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:10:17 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Vektor.o "..\\Vektor.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:12:09 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:13:36 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:15:17 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:17:19 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:24:16 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
+11:25:18 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
