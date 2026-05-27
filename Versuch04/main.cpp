@@ -41,36 +41,71 @@ int main()
     Vektor aussichtsPunkt(0, ERDRADIUS + KORPER/1000 + HOHE/1000, 0); // bitte sinnvoll initialisieren
     Vektor sicht(0, 0, 0);
 
-    double schritt = 0.000001;
-    double fehler = 0.000001;
+    double schritt = 0.01;
+    double fehler = 0.0000001;
     int zaehler = 0;
+    sicht = erdRadius.sub(aussichtsPunkt);
+    double winkel = sicht.winkel(erdRadius);
 
     while(true)
     {
-    	sicht = erdRadius.sub(aussichtsPunkt);
-    	double winkel = sicht.winkel(erdRadius);
     	if(sqrt((winkel - 90)*(winkel - 90)) <= fehler) //Absolut-Fehlerrechnung
     	{
     		break;
     	}
 
-    	erdRadius.rotiereUmZ(-schritt); //rotiereUmZ dreht gegen Uhrzeigersinn, deswegen negativ
-    	zaehler++;
+    	if(winkel > 90)
+    	{
+			int num = 0;
+    		while(winkel > 90)
+			{
+				erdRadius.rotiereUmZ(-schritt); //rotiereUmZ dreht gegen Uhrzeigersinn, deswegen negativ
+				sicht = erdRadius.sub(aussichtsPunkt);
+				winkel = sicht.winkel(erdRadius);
+				num++;
+			}
+    		std::cout << std::fixed;
+			std::cout << "\nZu weit vorwärts gedreht. Ändere Schrittweite von " << std::setprecision(12) << schritt
+					  << " zu " << std::setprecision(12) << -schritt/10 << std::endl;
+			std::cout << "Winkel: " << std::setprecision(12) << winkel
+					  << "\t\tSchritte in diesem Durchlauf: " << num << std::endl;
+			schritt = schritt/10;
+			zaehler += num;
+    	}
+
+    	if(winkel < 90)
+    	{
+    		int num = 0;
+    		while(winkel < 90)
+    		{
+    			erdRadius.rotiereUmZ(schritt); //rotiereUmZ dreht gegen Uhrzeigersinn, deswegen negativ
+    			sicht = erdRadius.sub(aussichtsPunkt);
+    			winkel = sicht.winkel(erdRadius);
+    			num++;
+    		}
+    		std::cout << std::fixed;
+    		std::cout << "\nZu weit rückwärts gedreht. Ändere Schrittweite von " << std::setprecision(12) << -schritt
+    				  << " zu " << std::setprecision(12) << schritt/10 << std::endl;
+    		std::cout << "Winkel: " << std::setprecision(12) << winkel
+    				  << "\t\tSchritte in diesem Durchlauf: " << num << std::endl;
+    		schritt = schritt/10;
+    		zaehler += num;
+    	}
     }
 
     double distanz = sicht.laenge();
-    double winkel = erdRadius.winkel(aussichtsPunkt);
+    double grad = erdRadius.winkel(aussichtsPunkt);
 
     /*std::cout << std::fixed;
     std::cout << "\nSie können " << std::setprecision(4) << distanz  << " Km weit sehen." << std::endl;
     std::cout << "Sie sind " << std::setprecision(4) << KORPER + HOHE << " Meter hoch." << std::endl;
-    std::cout << "Die Winkel beträgt " << std::setprecision(4) << winkel << " Grad" << std::endl;
+    std::cout << "Die Winkel beträgt " << std::setprecision(4) << grad << " Grad" << std::endl;
     std::cout << "Anzahl Schritte: " << zaehler << std::endl;*/
 
     std::cout << std::fixed;
     std::cout << "\nSie können " << std::setprecision(10) << distanz  << " Km weit sehen." << std::endl;
     std::cout << "Sie sind " << std::setprecision(10) << KORPER + HOHE << " Meter hoch." << std::endl;
-    std::cout << "Die Winkel beträgt " << std::setprecision(10) << winkel << " Grad" << std::endl;
+    std::cout << "Die Winkel beträgt " << std::setprecision(10) << grad << " Grad" << std::endl;
     std::cout << "Anzahl Schritte: " << zaehler << std::endl;
 
     return 0;
