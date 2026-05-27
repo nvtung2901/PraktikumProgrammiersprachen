@@ -19,7 +19,7 @@ Liste::Liste(): front(nullptr), back(nullptr)
  */
 void Liste::pushBack(Student pData)
 {
-    ListenElement* neuesElement = new ListenElement(pData, nullptr);
+    ListenElement* neuesElement = new ListenElement(pData, back, nullptr );
 
     if (front == nullptr)                                       // Liste leer?
     {
@@ -42,15 +42,16 @@ void Liste::popFront()
 {
     ListenElement* cursor = front;
 
-    if (front == back)                                       // Liste enthält nur ein Listenelement
+    if (front == back)                                       // Liste enthï¿½lt nur ein Listenelement
     {
-        delete front;                                        // Listenelement löschen
+        delete front;                                        // Listenelement lï¿½schen
         front = nullptr;
         back = nullptr;
     }
     else
     {
         front = front->getNext();
+        front->setPrev(nullptr);
         delete cursor;
     }
 }
@@ -93,4 +94,20 @@ void Liste::ausgabeVorwaerts() const
     	cursor->getData().ausgabe();
         cursor = cursor->getNext();
     }
+}
+
+void Liste::ausgabeRueckwaerts() const
+{
+	ListenElement* cursor = back;
+
+	while (cursor != nullptr)
+	{
+		cursor->getData().ausgabe();
+		cursor = cursor->getPrev();
+	}
+}
+
+void Liste::loeschenMatNr(unsigned int matNr)
+{
+
 }

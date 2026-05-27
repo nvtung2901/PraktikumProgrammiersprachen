@@ -16,13 +16,16 @@ private:
     ListenElement* front;                                         // Zeiger auf das erste Listenelement
     ListenElement* back;                                         // Zeiger auf das letzte Listenelement
 
+
 public:
     Liste();                                                     // Konstruktor mit Zeigerinitialisierung
     void pushBack(Student pData);
     void popFront();
+    void loeschenMatNr(unsigned int matNr);
     bool empty();
     Student dataFront();
     void ausgabeVorwaerts() const;
+    void ausgabeRueckwaerts() const;
 };
 
 #endif /*LISTE_H_*/

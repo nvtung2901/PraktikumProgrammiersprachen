@@ -31,7 +31,7 @@ int main()
         studentenListe.pushBack(student);
         student = Student(64567, "Paula Peters", "9.01.1981", "Weidenweg 12");
         studentenListe.pushBack(student);
-        student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wüllnerstr.9");
+        student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wï¿½llnerstr.9");
         studentenListe.pushBack(student);
     }
 
@@ -42,6 +42,8 @@ int main()
                   << "(1): Datenelement hinten hinzufuegen" << std::endl
                   << "(2): Datenelement vorne entfernen" << std::endl
                   << "(3): Datenbank ausgeben" << std::endl
+				  << "(4): Datenbank in umgekehrten Reihenfolge ausgeben" << std::endl
+				  << "(5): Datenelement loeschen" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
@@ -56,7 +58,7 @@ int main()
                     std::string geburtstag = "";
                     std::string adresse = "";
 
-                    std::cout << "Bitte geben sie die Daten für den Studenten ein.\nName: ";
+                    std::cout << "Bitte geben sie die Daten fï¿½r den Studenten ein.\nName: ";
                     getline(std::cin, name);    // ganze Zeile einlesen inklusive aller Leerzeichen
 
                     std::cout << "Geburtsdatum: ";
@@ -104,6 +106,29 @@ int main()
                     std::cout << "Die Liste ist leer!\n\n";
                 }
                 break;
+
+            // Datenbank rueckwaerts ausgeben
+            case '4':
+            	if(!studentenListe.empty())
+            	{
+            		std::cout << "Inhalt der Liste in umgekehrter Reihenfolge:" << std::endl;
+            		studentenListe.ausgabeRueckwaerts();
+            	}
+            	else
+            	{
+            		std::cout << "Die Liste ist leer!\n\n";
+            	}
+            	break;
+
+            // Datenelement loeschen
+            case '5':
+				{
+					unsigned int matNr = 0;
+					std::cout << "Bitte geben Sie die Matrikelnummer des Students ein, der geloescht werden soll: ";
+					std::cin >> matNr;
+					std::cin.ignore(10, '\n');
+				}
+				break;
 
             case '0':
                 std::cout << "Das Programm wird nun beendet";

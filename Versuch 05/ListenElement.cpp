@@ -10,8 +10,8 @@
  * @param pData Ein Objekt der Klasse Student
  * @param pNext Zeiger auf das naechste Listenelement
  */
-ListenElement::ListenElement(Student pData, ListenElement* pNext):
-    data(pData), next(pNext)
+ListenElement::ListenElement(Student pData, ListenElement* pPrev, ListenElement* pNext):
+    data(pData), prev(pPrev), next(pNext)
 {
 }
 
@@ -35,6 +35,11 @@ void ListenElement::setNext(ListenElement* pNext)
     next = pNext;
 }
 
+void ListenElement::setPrev(ListenElement* pPrev)
+{
+	prev = pPrev;
+}
+
 /**
  * @brief Gibt ein Objekt der Klasse Student zurueck
  *
@@ -53,4 +58,9 @@ Student ListenElement::getData() const
 ListenElement* ListenElement::getNext() const
 {
     return next;
+}
+
+ListenElement* ListenElement::getPrev() const
+{
+	return prev;
 }

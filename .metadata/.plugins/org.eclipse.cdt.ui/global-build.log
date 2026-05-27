@@ -7,3 +7,271 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp"
 g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
 Info: Nothing to build for Versuch04
 Info: Nothing to build for Versuch 05
+16:24:24 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::pushBack(Student)':
+..\Liste.cpp:22:67: error: no matching function for call to 'ListenElement::ListenElement(Student&, std::nullptr_t)'
+   22 |     ListenElement* neuesElement = new ListenElement(pData, nullptr);
+      |                                                                   ^
+..\Liste.cpp:22:67: note: there are 3 candidates
+In file included from ..\Liste.h:10,
+                 from ..\Liste.cpp:5:
+..\ListenElement.h:18:5: note: candidate 1: 'ListenElement::ListenElement(Student, ListenElement*, ListenElement*)'
+   18 |     ListenElement(Student pData,ListenElement* pPrev, ListenElement* pNext);
+      |     ^~~~~~~~~~~~~
+..\ListenElement.h:18:5: note: candidate expects 3 arguments, 2 provided
+..\ListenElement.h:10:7: note: candidate 2: 'ListenElement::ListenElement(const ListenElement&)'
+   10 | class ListenElement
+      |       ^~~~~~~~~~~~~
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+..\ListenElement.h:10:7: note: candidate 3: 'ListenElement::ListenElement(ListenElement&&)'
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+16:25:44 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::pushBack(Student)':
+..\Liste.cpp:22:67: error: no matching function for call to 'ListenElement::ListenElement(Student&, std::nullptr_t)'
+   22 |     ListenElement* neuesElement = new ListenElement(pData, nullptr);
+      |                                                                   ^
+..\Liste.cpp:22:67: note: there are 3 candidates
+In file included from ..\Liste.h:10,
+                 from ..\Liste.cpp:5:
+..\ListenElement.h:18:5: note: candidate 1: 'ListenElement::ListenElement(Student, ListenElement*, ListenElement*)'
+   18 |     ListenElement(Student pData,ListenElement* pPrev, ListenElement* pNext);
+      |     ^~~~~~~~~~~~~
+..\ListenElement.h:18:5: note: candidate expects 3 arguments, 2 provided
+..\ListenElement.h:10:7: note: candidate 2: 'ListenElement::ListenElement(const ListenElement&)'
+   10 | class ListenElement
+      |       ^~~~~~~~~~~~~
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+..\ListenElement.h:10:7: note: candidate 3: 'ListenElement::ListenElement(ListenElement&&)'
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+16:26:38 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o ListenElement.o "..\\ListenElement.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::pushBack(Student)':
+..\Liste.cpp:22:67: error: no matching function for call to 'ListenElement::ListenElement(Student&, std::nullptr_t)'
+   22 |     ListenElement* neuesElement = new ListenElement(pData, nullptr);
+      |                                                                   ^
+..\Liste.cpp:22:67: note: there are 3 candidates
+In file included from ..\Liste.h:10,
+                 from ..\Liste.cpp:5:
+..\ListenElement.h:18:5: note: candidate 1: 'ListenElement::ListenElement(Student, ListenElement*, ListenElement*)'
+   18 |     ListenElement(Student pData,ListenElement* pPrev, ListenElement* pNext);
+      |     ^~~~~~~~~~~~~
+..\ListenElement.h:18:5: note: candidate expects 3 arguments, 2 provided
+..\ListenElement.h:10:7: note: candidate 2: 'ListenElement::ListenElement(const ListenElement&)'
+   10 | class ListenElement
+      |       ^~~~~~~~~~~~~
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+..\ListenElement.h:10:7: note: candidate 3: 'ListenElement::ListenElement(ListenElement&&)'
+..\ListenElement.h:10:7: note: candidate expects 1 argument, 2 provided
+16:28:56 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+16:36:07 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+16:38:43 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:09:22 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:46:19: error: expected primary-expression before '<<' token
+   46 |                   << "(0): Beenden" << std::endl;
+      |                   ^~
+17:09:38 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Versuch 05.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:09:56 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:13:23 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:27:18 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp:110:6: error: no declaration matches 'void Liste::loeschenMatNr()'
+  110 | void Liste::loeschenMatNr()
+      |      ^~~~~
+In file included from ..\Liste.cpp:5:
+..\Liste.h:24:10: note: candidate is: 'void Liste::loeschenMatNr(unsigned int)'
+   24 |     void loeschenMatNr(unsigned int matNr);
+      |          ^~~~~~~~~~~~~
+..\Liste.h:13:7: note: 'class Liste' defined here
+   13 | class Liste
+      |       ^~~~~
+17:27:39 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp:110:6: error: variable or field 'loeschenMatNr' declared void
+  110 | void Liste::loeschenMatNr(matNr)
+      |      ^~~~~
+..\Liste.cpp:110:27: error: 'matNr' was not declared in this scope
+  110 | void Liste::loeschenMatNr(matNr)
+      |                           ^~~~~
+17:27:46 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:128:53: error: invalid conversion from 'const char*' to 'std::basic_istream<char>::int_type' {aka 'int'} [-fpermissive]
+  128 |                                 std::cin.ignore(10, "\n");
+      |                                                     ^~~~
+      |                                                     |
+      |                                                     const char*
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iostream:44,
+                 from ..\main.cpp:8:
+C:/msys64/mingw64/include/c++/15.2.0/istream:546:39: note: initializing argument 2 of 'std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::ignore(std::streamsize, int_type) [with _CharT = char; _Traits = std::char_traits<char>; std::streamsize = long long int; int_type = int]'
+  546 |       ignore(streamsize __n, int_type __delim);
+      |                              ~~~~~~~~~^~~~~~~
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+17:29:13 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:128:53: error: invalid conversion from 'const char*' to 'std::basic_istream<char>::int_type' {aka 'int'} [-fpermissive]
+  128 |                                 std::cin.ignore(10, "\n");
+      |                                                     ^~~~
+      |                                                     |
+      |                                                     const char*
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iostream:44,
+                 from ..\main.cpp:8:
+C:/msys64/mingw64/include/c++/15.2.0/istream:546:39: note: initializing argument 2 of 'std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::ignore(std::streamsize, int_type) [with _CharT = char; _Traits = std::char_traits<char>; std::streamsize = long long int; int_type = int]'
+  546 |       ignore(streamsize __n, int_type __delim);
+      |                              ~~~~~~~~~^~~~~~~
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:37: note:   crosses initialization of 'int matNr'
+  125 |                                 int matNr = 0;
+      |                                     ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:37: note:   crosses initialization of 'int matNr'
+  125 |                                 int matNr = 0;
+      |                                     ^~~~~
+17:29:27 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:128:53: error: invalid conversion from 'const char*' to 'std::basic_istream<char>::int_type' {aka 'int'} [-fpermissive]
+  128 |                                 std::cin.ignore(10, "\n");
+      |                                                     ^~~~
+      |                                                     |
+      |                                                     const char*
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iostream:44,
+                 from ..\main.cpp:8:
+C:/msys64/mingw64/include/c++/15.2.0/istream:546:39: note: initializing argument 2 of 'std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::ignore(std::streamsize, int_type) [with _CharT = char; _Traits = std::char_traits<char>; std::streamsize = long long int; int_type = int]'
+  546 |       ignore(streamsize __n, int_type __delim);
+      |                              ~~~~~~~~~^~~~~~~
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+17:29:30 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:128:53: error: invalid conversion from 'const char*' to 'std::basic_istream<char>::int_type' {aka 'int'} [-fpermissive]
+  128 |                                 std::cin.ignore(10, "\n");
+      |                                                     ^~~~
+      |                                                     |
+      |                                                     const char*
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iostream:44,
+                 from ..\main.cpp:8:
+C:/msys64/mingw64/include/c++/15.2.0/istream:546:39: note: initializing argument 2 of 'std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::ignore(std::streamsize, int_type) [with _CharT = char; _Traits = std::char_traits<char>; std::streamsize = long long int; int_type = int]'
+  546 |       ignore(streamsize __n, int_type __delim);
+      |                              ~~~~~~~~~^~~~~~~
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+17:29:31 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:128:53: error: invalid conversion from 'const char*' to 'std::basic_istream<char>::int_type' {aka 'int'} [-fpermissive]
+  128 |                                 std::cin.ignore(10, "\n");
+      |                                                     ^~~~
+      |                                                     |
+      |                                                     const char*
+In file included from C:/msys64/mingw64/include/c++/15.2.0/iostream:44,
+                 from ..\main.cpp:8:
+C:/msys64/mingw64/include/c++/15.2.0/istream:546:39: note: initializing argument 2 of 'std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::ignore(std::streamsize, int_type) [with _CharT = char; _Traits = std::char_traits<char>; std::streamsize = long long int; int_type = int]'
+  546 |       ignore(streamsize __n, int_type __delim);
+      |                              ~~~~~~~~~^~~~~~~
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+17:30:44 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:131:18: error: jump to case label
+  131 |             case '0':
+      |                  ^~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+..\main.cpp:135:13: error: jump to case label
+  135 |             default :
+      |             ^~~~~~~
+..\main.cpp:125:46: note:   crosses initialization of 'unsigned int matNr'
+  125 |                                 unsigned int matNr = 0;
+      |                                              ^~~~~
+17:31:52 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
