@@ -390,3 +390,53 @@ g++ -o Versuch04.exe Vektor.o main.o
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
 g++ -o Versuch04.exe Vektor.o main.o 
+11:37:08 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:52:29: error: invalid operands of types 'double' and 'int' to binary 'operator^'
+   52 |         if(sqrt(winkel - 90)^2) <= fehler)
+      |            ~~~~~~~~~~~~~~~~~^~
+      |                |             |
+      |                double        int
+..\main.cpp:52:33: error: expected primary-expression before '<=' token
+   52 |         if(sqrt(winkel - 90)^2) <= fehler)
+      |                                 ^~
+11:37:17 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:52:29: error: invalid operands of types 'double' and 'int' to binary 'operator^'
+   52 |         if(sqrt(winkel - 90)^2) <= fehler))
+      |            ~~~~~~~~~~~~~~~~~^~
+      |                |             |
+      |                double        int
+..\main.cpp:52:33: error: expected primary-expression before '<=' token
+   52 |         if(sqrt(winkel - 90)^2) <= fehler))
+      |                                 ^~
+11:37:35 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:52:29: error: invalid operands of types 'double' and 'bool' to binary 'operator^'
+   52 |         if(sqrt(winkel - 90)^2 <= fehler)
+      |            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+      |                |               |
+      |                double          bool
+..\main.cpp:52:32: warning: suggest parentheses around comparison in operand of '^' [-Wparentheses]
+   52 |         if(sqrt(winkel - 90)^2 <= fehler)
+      |                              ~~^~~~~~~~~
+11:38:32 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:52:30: error: invalid operands of types 'double' and 'int' to binary 'operator^'
+   52 |         if(sqrt((winkel - 90)^2) <= fehler) //Absolut-Fehlerrechnung
+      |                 ~~~~~~~~~~~~~^~
+      |                         |     |
+      |                         |     int
+      |                         double
+11:38:54 **** Incremental Build of configuration Debug for project Versuch04 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Versuch04.exe Vektor.o main.o 
