@@ -107,7 +107,39 @@ void Liste::ausgabeRueckwaerts() const
 	}
 }
 
+void Liste::loeschen(ListenElement* cursor)
+{
+	if (cursor == front) // Fuer das erste Element
+	{
+		popFront();
+	}
+	else if (cursor == back) // Fuer das letzte Element
+	{
+		back = cursor->getPrev();
+		back->setNext(nullptr);
+		delete cursor;
+	}
+	else // Fuer Elemente, die mittendrin sind
+	{
+		cursor->getPrev()->setNext(cursor->getNext());
+		cursor->getNext()->setPrev(cursor->getPrev());
+		delete cursor;
+	}
+}
+
 void Liste::loeschenMatNr(unsigned int matNr)
 {
-
+	ListenElement* cursor = front;
+	while(cursor != nullptr)
+	{
+		if (cursor->getData().getMatNr() == matNr)
+		{
+			cursor->getData().ausgabe();
+			std::cout << "wird geloescht" << std::endl;
+			loeschen(cursor);
+			return;
+		}
+		cursor = cursor->getNext();
+	}
+	std::cout << "Die Liste ist leer oder es gibt keinen Student mit dieser Matrikelnummer" << std::endl;
 }

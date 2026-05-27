@@ -275,3 +275,135 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp"
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
 g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:44:06 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::loeschen(ListenElement*)':
+..\Liste.cpp:112:17: error: 'ListenElement* ListenElement::prev' is private within this context
+  112 |         cursor->prev->next = cursor->next;
+      |                 ^~~~
+In file included from ..\Liste.h:10,
+                 from ..\Liste.cpp:5:
+..\ListenElement.h:14:20: note: declared private here
+   14 |     ListenElement* prev;
+      |                    ^~~~
+..\Liste.cpp:112:23: error: 'ListenElement* ListenElement::next' is private within this context
+  112 |         cursor->prev->next = cursor->next;
+      |                       ^~~~
+..\ListenElement.h:15:20: note: declared private here
+   15 |     ListenElement* next;
+      |                    ^~~~
+..\Liste.cpp:112:38: error: 'ListenElement* ListenElement::next' is private within this context
+  112 |         cursor->prev->next = cursor->next;
+      |                                      ^~~~
+..\ListenElement.h:15:20: note: declared private here
+   15 |     ListenElement* next;
+      |                    ^~~~
+..\Liste.cpp:113:17: error: 'ListenElement* ListenElement::next' is private within this context
+  113 |         cursor->next->prev = cursor->prev;
+      |                 ^~~~
+..\ListenElement.h:15:20: note: declared private here
+   15 |     ListenElement* next;
+      |                    ^~~~
+..\Liste.cpp:113:23: error: 'ListenElement* ListenElement::prev' is private within this context
+  113 |         cursor->next->prev = cursor->prev;
+      |                       ^~~~
+..\ListenElement.h:14:20: note: declared private here
+   14 |     ListenElement* prev;
+      |                    ^~~~
+..\Liste.cpp:113:38: error: 'ListenElement* ListenElement::prev' is private within this context
+  113 |         cursor->next->prev = cursor->prev;
+      |                                      ^~~~
+..\ListenElement.h:14:20: note: declared private here
+   14 |     ListenElement* prev;
+      |                    ^~~~
+17:44:58 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::loeschen(ListenElement*)':
+..\Liste.cpp:112:35: error: lvalue required as left operand of assignment
+  112 |         cursor->getPrev()->getNext() = cursor->getNext();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+..\Liste.cpp:113:35: error: lvalue required as left operand of assignment
+  113 |         cursor->getNext()->getPrev() = cursor->getPrev();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+17:46:05 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:49:54 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::loeschenMatNr(unsigned int)':
+..\Liste.cpp:124:34: error: cannot convert 'ListenElement**' to 'ListenElement*'
+  124 |                         loeschen(&cursor);
+      |                                  ^~~~~~~
+      |                                  |
+      |                                  ListenElement**
+..\Liste.cpp:110:37: note: initializing argument 1 of 'void Liste::loeschen(ListenElement*)'
+  110 | void Liste::loeschen(ListenElement* cursor)
+      |                      ~~~~~~~~~~~~~~~^~~~~~
+17:50:07 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:53:12 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:54:07 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+Info: Nothing to build for Versuch 05
+17:55:10 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+17:55:40 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+Info: Nothing to build for Versuch 05
+Info: Nothing to build for Versuch 05
+18:00:32 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+..\Liste.cpp: In member function 'void Liste::loeschenMatNr(unsigned int)':
+..\Liste.cpp:122:33: error: 'popfront' was not declared in this scope; did you mean 'popFront'?
+  122 |                                 popfront();
+      |                                 ^~~~~~~~
+      |                                 popFront
+18:05:00 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+Info: Nothing to build for Versuch 05
+18:07:20 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Versuch 05.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:07:24 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+18:10:08 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Versuch 05.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:11:04 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+18:12:55 **** Incremental Build of configuration Debug for project Versuch 05 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Liste.o "..\\Liste.cpp" 
+g++ -o "Versuch 05.exe" Liste.o ListenElement.o Student.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Versuch 05.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status

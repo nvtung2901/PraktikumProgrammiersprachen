@@ -127,6 +127,8 @@ int main()
 					std::cout << "Bitte geben Sie die Matrikelnummer des Students ein, der geloescht werden soll: ";
 					std::cin >> matNr;
 					std::cin.ignore(10, '\n');
+					studentenListe.loeschenMatNr(matNr);
+
 				}
 				break;
 

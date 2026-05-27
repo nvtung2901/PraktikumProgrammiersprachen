@@ -21,6 +21,7 @@ public:
     Liste();                                                     // Konstruktor mit Zeigerinitialisierung
     void pushBack(Student pData);
     void popFront();
+    void loeschen(ListenElement* cursor);
     void loeschenMatNr(unsigned int matNr);
     bool empty();
     Student dataFront();
